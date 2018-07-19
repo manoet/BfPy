@@ -6,7 +6,7 @@ interpreter written in Python 3.
 `python bf.py "<BRAINFUCK_CODE>"`
 
 ## Tests
-`python tests/tests.py`
+`python -m tests`
 
 ## License
 MIT

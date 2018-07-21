@@ -3,9 +3,13 @@ language: python
 python:
   - "3.6"
 
-install: true
+install:
+  - pip install python-coveralls
 
 script:
   - python -m tests
+  - coverage run --omit="tests/*" -m tests
 
+after_success:
+  - coveralls
 

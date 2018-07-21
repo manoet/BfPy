@@ -16,16 +16,6 @@ def redirect_out():
     finally:
         sys.stdout = old_out
 
-@contextmanager
-def redirect_in():
-    new_in = StringIO()
-    old_in = sys.stdin
-    try:
-        sys.stdin = new_in
-        yield sys.stdin
-    finally:
-        sys.stdin = old_in
-
 class BfPyTest(unittest.TestCase):
 
     def test_hello_world(self):
